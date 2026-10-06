@@ -6,6 +6,8 @@ durch eine Zeile '---' vom HTML-Inhalt. Kopf, Säulen-Umschalter und Fuß werden
 hier einheitlich ergänzt. Aufruf:  python3 _bauen.py
 """
 import pathlib
+import html
+import re
 
 WURZEL = pathlib.Path(__file__).resolve().parent
 QUELLE = WURZEL / "_inhalt"
@@ -18,8 +20,16 @@ STAMM = {
 }
 
 def wert(schluessel, text):
-    v = STAMM[schluessel]
-    return v if v else f'<span class="platzhalter">[{text}]</span>'
+    v = STAMM[schluessel].strip()
+    if not v:
+        return '<span class="leise">Noch nicht hinterlegt</span>'
+    label = html.escape(v)
+    if schluessel == "email":
+        return f'<a href="mailto:{html.escape(v, quote=True)}">{label}</a>'
+    if schluessel == "telefon":
+        nummer = re.sub(r"[^+0-9]", "", v)
+        return f'<a href="tel:{nummer}">{label}</a>'
+    return label
 
 NAV = [
     ("beratung/", "Beratung", "beratung"),
@@ -30,9 +40,11 @@ NAV = [
 ]
 SAEULEN = [("01", "Beratung", "beratung"), ("02", "Sport", "sport"), ("03", "Schulungen", "schulungen")]
 
+AKTIV_ATTR = ' aria-current="page"'
+
 def kopf(r, aktiv):
     links = "\n".join(
-        f'        <a href="{r}{h}"{" aria-current=\"page\"" if k == aktiv else ""}>{t}</a>'
+        f'        <a href="{r}{h}"{AKTIV_ATTR if k == aktiv else ""}>{t}</a>'
         for h, t, k in NAV
     )
     return f"""  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
@@ -40,13 +52,14 @@ def kopf(r, aktiv):
   <header class="kopf">
     <div class="container kopf__inner">
       <a class="marke" href="{r}index.html" aria-label="BSSD — zur Startseite">
+        <span class="marke-icon" aria-hidden="true"><i></i><i></i><i></i></span>
         <span class="marke__wort">BSSD</span>
         <span class="marke__zusatz">Beratung · Schulungen · Sport · Dienstleistungen</span>
       </a>
-      <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnav">☰</button>
+      <button type="button" class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnav">☰</button>
       <nav class="nav" id="hauptnav" aria-label="Hauptnavigation">
 {links}
-        <a class="knopf" href="{r}kontakt/"{" aria-current=\"page\"" if aktiv == "kontakt" else ""}>Kontakt</a>
+        <a class="knopf" href="{r}kontakt/"{AKTIV_ATTR if aktiv == "kontakt" else ""}>Kontakt <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -56,7 +69,7 @@ def umschalter(r, aktiv):
     if aktiv not in {k for _, _, k in SAEULEN}:
         return ""
     punkte = "\n".join(
-        f'      <li><a href="{r}{k}/" data-s="{k}"{" aria-current=\"page\"" if k == aktiv else ""}><span>{n}</span>{t}</a></li>'
+        f'      <li><a href="{r}{k}/" data-s="{k}"{AKTIV_ATTR if k == aktiv else ""}><span>{n}</span>{t}</a></li>'
         for n, t, k in SAEULEN
     )
     return f"""
@@ -112,7 +125,7 @@ def fuss(r):
 """
 
 def seite(meta, inhalt):
-    tiefe = meta["pfad"].count("/")
+    tiefe = len(pathlib.PurePosixPath(meta["pfad"]).parts) if meta["pfad"] else 0
     r = "../" * tiefe
     saeule = meta.get("saeule", "beratung")
     aktiv = meta.get("aktiv", "")
@@ -120,7 +133,10 @@ def seite(meta, inhalt):
               .replace("{EMAIL}", wert("email", "E-Mail"))
               .replace("{TELEFON}", wert("telefon", "Telefon"))
               .replace("{ORT}", wert("ort", "Ort / Einsatzgebiet"))
-              .replace("{EMAIL_ROH}", STAMM["email"]))
+              .replace("{EMAIL_ROH}", html.escape(STAMM["email"].strip(), quote=True))
+              .replace("{SEND_DISABLED}", "disabled")
+              .replace("{KONTAKT_STATUS}", "" if STAMM["email"].strip() else "Die Kontaktmöglichkeit wird gerade eingerichtet. E-Mail-Anfragen sind noch nicht verfügbar.")
+              .replace("{KONTAKT_HINWEIS}", "Der Button öffnet Ihr E-Mail-Programm mit der vorbereiteten Nachricht. Versendet wird sie erst dort." if STAMM["email"].strip() else "Sobald die E-Mail-Adresse hinterlegt ist, können Sie hier eine Nachricht vorbereiten."))
     return f"""<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -128,14 +144,12 @@ def seite(meta, inhalt):
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{meta["titel"]}</title>
   <meta name="description" content="{meta["beschreibung"]}" />
-  <meta name="theme-color" content="#0b1622" />
+  <meta name="theme-color" content="#173c3e" />
   <link rel="icon" href="{r}assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&amp;family=EB+Garamond:wght@400;500&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" />
   <link rel="stylesheet" href="{r}assets/css/bssd.css" />
 </head>
 <body data-saeule="{saeule}">
+  <script>document.documentElement.classList.add("js");</script>
 {kopf(r, aktiv)}{umschalter(r, aktiv)}
   <main id="inhalt">
 {inhalt.rstrip()}

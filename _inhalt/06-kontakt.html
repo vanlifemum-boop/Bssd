@@ -8,13 +8,14 @@ saeule: beratung
       <div class="container">
         <p class="hero__nummer einblenden">Kontakt</p>
         <h1 class="einblenden">Sprechen<br />wir <em>darüber.</em></h1>
-        <p class="lead einblenden">Schreiben Sie kurz, worum es geht – Sie erhalten zeitnah eine Rückmeldung. Alle Anfragen werden vertraulich behandelt.</p>
+        <p class="lead einblenden">Ob Beratung, Training oder Schulung: Hier finden Sie den richtigen Einstieg für Ihr Anliegen.</p>
       </div>
     </section>
 
     <section class="sek sek--weiss">
       <div class="container hero__raster" style="align-items:start">
-        <form class="formular" id="anfrage" data-empfaenger="{EMAIL_ROH}" novalidate>
+        <form class="formular" id="anfrage" data-empfaenger="{EMAIL_ROH}">
+          <p class="formular-status" id="kontakt-status" role="status">{KONTAKT_STATUS}</p>
           <div class="zwei">
             <label>Name *<input name="name" autocomplete="name" required /></label>
             <label>E-Mail *<input name="email" type="email" autocomplete="email" required /></label>
@@ -33,8 +34,9 @@ saeule: beratung
           </div>
           <label>Ihre Nachricht *<textarea name="nachricht" required></textarea></label>
           <label class="check"><input type="checkbox" name="einwilligung" required /> <span>Ich habe die <a href="{R}datenschutz/">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden. *</span></label>
-          <div><button class="knopf" type="submit">Anfrage per E-Mail senden <span class="pfeil"></span></button></div>
-          <p class="leise" style="font-size:.9rem;margin:0">Beim Absenden öffnet sich Ihr E-Mail-Programm mit der vorbereiteten Nachricht.</p>
+          <div><button class="knopf" type="submit" {SEND_DISABLED}>E-Mail vorbereiten <span class="pfeil"></span></button></div>
+          <p class="leise" style="font-size:.9rem;margin:0">{KONTAKT_HINWEIS}</p>
+        <noscript><p class="formular-status">Zum Vorbereiten der Nachricht wird JavaScript benötigt. Nutzen Sie alternativ die Kontaktdaten neben dem Formular, sobald diese verfügbar sind.</p></noscript>
         </form>
 
         <ul class="kontaktdaten">

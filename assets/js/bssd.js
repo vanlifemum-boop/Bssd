@@ -1,53 +1,86 @@
-// BSSD — kleine Helfer: Mobilmenü, Scroll-Einblendung, Kontaktformular, Jahreszahl.
+// BSSD — navigation and email preparation. No network requests or local storage.
 (function () {
-  // Mobilmenü
+  "use strict";
   var burger = document.querySelector(".burger");
   var nav = document.querySelector(".nav");
+  function closeMenu(returnFocus) {
+    if (!burger || !nav) return;
+    nav.classList.remove("ist-offen");
+    burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "Menü öffnen");
+    burger.textContent = "☰";
+    if (returnFocus) burger.focus();
+  }
   if (burger && nav) {
     burger.addEventListener("click", function () {
-      var offen = nav.classList.toggle("ist-offen");
-      burger.setAttribute("aria-expanded", String(offen));
-      burger.textContent = offen ? "✕" : "☰";
+      var open = nav.classList.toggle("ist-offen");
+      burger.setAttribute("aria-expanded", String(open));
+      burger.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+      burger.textContent = open ? "×" : "☰";
     });
-  }
-
-  // Scroll-Einblendung (bewegt nur, blendet nie aus — Inhalt bleibt immer lesbar)
-  var ziele = document.querySelectorAll("[data-zeigen]");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (eintraege) {
-      eintraege.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("ist-sichtbar"); io.unobserve(e.target); }
+    nav.addEventListener("click", function (event) {
+      if (event.target.closest("a")) closeMenu(false);
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && nav.classList.contains("ist-offen")) closeMenu(true);
+    });
+    document.addEventListener("click", function (event) {
+      if (!nav.contains(event.target) && !burger.contains(event.target)) closeMenu(false);
+    });
+    if (window.matchMedia) {
+      var desktop = window.matchMedia("(min-width: 901px)");
+      if (desktop.addEventListener) desktop.addEventListener("change", function (event) {
+        if (event.matches) closeMenu(false);
       });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    ziele.forEach(function (el) { io.observe(el); });
-  } else {
-    ziele.forEach(function (el) { el.classList.add("ist-sichtbar"); });
+    }
   }
 
-  // Kontaktformular: Bereich aus ?bereich=… vorwählen, beim Absenden E-Mail vorbereiten
+  var targets = document.querySelectorAll("[data-zeigen]");
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ist-sichtbar");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -5% 0px" });
+    targets.forEach(function (target) { observer.observe(target); });
+  }
+
   var form = document.getElementById("anfrage");
   if (form) {
-    var bereich = new URLSearchParams(location.search).get("bereich");
-    if (bereich && form.bereich) {
-      var opt = form.bereich.querySelector('option[value="' + bereich + '"]');
-      if (opt) opt.selected = true;
+    var field = form.elements.namedItem("bereich");
+    var requested = new URLSearchParams(location.search).get("bereich");
+    // Compare option values directly; query parameters never become CSS selectors.
+    if (field && requested) {
+      Array.from(field.options).forEach(function (option) {
+        if (option.value === requested) option.selected = true;
+      });
     }
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
+    var recipient = (form.dataset.empfaenger || "").trim();
+    var status = document.getElementById("kontakt-status");
+    var submit = form.querySelector('button[type="submit"]');
+    if (submit) submit.disabled = !recipient;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!recipient) {
+        if (status) status.textContent = "Die Kontaktmöglichkeit wird gerade eingerichtet. E-Mail-Anfragen sind noch nicht verfügbar.";
+        return;
+      }
       if (!form.reportValidity()) return;
-      var f = form.elements;
-      var betreff = "Anfrage: " + f.bereich.options[f.bereich.selectedIndex].text;
-      var text =
-        "Name: " + f.name.value + "\n" +
-        "E-Mail: " + f.email.value + "\n" +
-        (f.telefon.value ? "Telefon: " + f.telefon.value + "\n" : "") +
-        "Bereich: " + f.bereich.options[f.bereich.selectedIndex].text + "\n\n" +
-        f.nachricht.value;
-      location.href = "mailto:" + form.dataset.empfaenger +
-        "?subject=" + encodeURIComponent(betreff) + "&body=" + encodeURIComponent(text);
+      var fields = form.elements;
+      var area = fields.namedItem("bereich");
+      var areaText = area.options[area.selectedIndex].text;
+      var body = "Name: " + fields.namedItem("name").value + "\n" +
+        "E-Mail: " + fields.namedItem("email").value + "\n" +
+        (fields.namedItem("telefon").value ? "Telefon: " + fields.namedItem("telefon").value + "\n" : "") +
+        "Bereich: " + areaText + "\n\n" + fields.namedItem("nachricht").value;
+      location.href = "mailto:" + encodeURIComponent(recipient) +
+        "?subject=" + encodeURIComponent("Anfrage: " + areaText) + "&body=" + encodeURIComponent(body);
+      if (status) status.textContent = "Die Nachricht ist für Ihr E-Mail-Programm vorbereitet. Bitte senden Sie sie dort ab. Falls sich kein Programm öffnet, nutzen Sie die angegebene E-Mail-Adresse.";
     });
   }
-
-  var jahr = document.getElementById("jahr");
-  if (jahr) jahr.textContent = new Date().getFullYear();
+  var year = document.getElementById("jahr");
+  if (year) year.textContent = new Date().getFullYear();
 })();

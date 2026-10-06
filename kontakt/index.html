@@ -5,30 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt — BSSD | Gregor Nebel</title>
   <meta name="description" content="Kontakt zu BSSD – Gregor Nebel. Anfragen zu Beratung, Personal Training, Schulungen und Einzel-AAT®." />
-  <meta name="theme-color" content="#0b1622" />
+  <meta name="theme-color" content="#173c3e" />
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&amp;family=EB+Garamond:wght@400;500&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" />
   <link rel="stylesheet" href="../assets/css/bssd.css" />
 </head>
 <body data-saeule="beratung">
+  <script>document.documentElement.classList.add("js");</script>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="kopf">
     <div class="container kopf__inner">
       <a class="marke" href="../index.html" aria-label="BSSD — zur Startseite">
+        <span class="marke-icon" aria-hidden="true"><i></i><i></i><i></i></span>
         <span class="marke__wort">BSSD</span>
         <span class="marke__zusatz">Beratung · Schulungen · Sport · Dienstleistungen</span>
       </a>
-      <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnav">☰</button>
+      <button type="button" class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnav">☰</button>
       <nav class="nav" id="hauptnav" aria-label="Hauptnavigation">
         <a href="../beratung/">Beratung</a>
         <a href="../sport/">Sport</a>
         <a href="../schulungen/">Schulungen</a>
         <a href="../anti-gewalt-training/">Anti-Gewalt-Training</a>
         <a href="../ueber-mich/">Über mich</a>
-        <a class="knopf" href="../kontakt/" aria-current="page">Kontakt</a>
+        <a class="knopf" href="../kontakt/" aria-current="page">Kontakt <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -38,13 +37,14 @@
       <div class="container">
         <p class="hero__nummer einblenden">Kontakt</p>
         <h1 class="einblenden">Sprechen<br />wir <em>darüber.</em></h1>
-        <p class="lead einblenden">Schreiben Sie kurz, worum es geht – Sie erhalten zeitnah eine Rückmeldung. Alle Anfragen werden vertraulich behandelt.</p>
+        <p class="lead einblenden">Ob Beratung, Training oder Schulung: Hier finden Sie den richtigen Einstieg für Ihr Anliegen.</p>
       </div>
     </section>
 
     <section class="sek sek--weiss">
       <div class="container hero__raster" style="align-items:start">
-        <form class="formular" id="anfrage" data-empfaenger="" novalidate>
+        <form class="formular" id="anfrage" data-empfaenger="">
+          <p class="formular-status" id="kontakt-status" role="status">Die Kontaktmöglichkeit wird gerade eingerichtet. E-Mail-Anfragen sind noch nicht verfügbar.</p>
           <div class="zwei">
             <label>Name *<input name="name" autocomplete="name" required /></label>
             <label>E-Mail *<input name="email" type="email" autocomplete="email" required /></label>
@@ -63,14 +63,15 @@
           </div>
           <label>Ihre Nachricht *<textarea name="nachricht" required></textarea></label>
           <label class="check"><input type="checkbox" name="einwilligung" required /> <span>Ich habe die <a href="../datenschutz/">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden. *</span></label>
-          <div><button class="knopf" type="submit">Anfrage per E-Mail senden <span class="pfeil"></span></button></div>
-          <p class="leise" style="font-size:.9rem;margin:0">Beim Absenden öffnet sich Ihr E-Mail-Programm mit der vorbereiteten Nachricht.</p>
+          <div><button class="knopf" type="submit" disabled>E-Mail vorbereiten <span class="pfeil"></span></button></div>
+          <p class="leise" style="font-size:.9rem;margin:0">Sobald die E-Mail-Adresse hinterlegt ist, können Sie hier eine Nachricht vorbereiten.</p>
+        <noscript><p class="formular-status">Zum Vorbereiten der Nachricht wird JavaScript benötigt. Nutzen Sie alternativ die Kontaktdaten neben dem Formular, sobald diese verfügbar sind.</p></noscript>
         </form>
 
         <ul class="kontaktdaten">
-          <li><small>Telefon</small><span class="platzhalter">[Telefon]</span></li>
-          <li><small>E-Mail</small><span class="platzhalter">[E-Mail]</span></li>
-          <li><small>Einsatzgebiet</small><span class="platzhalter">[Ort / Einsatzgebiet]</span></li>
+          <li><small>Telefon</small><span class="leise">Noch nicht hinterlegt</span></li>
+          <li><small>E-Mail</small><span class="leise">Noch nicht hinterlegt</span></li>
+          <li><small>Einsatzgebiet</small><span class="leise">Noch nicht hinterlegt</span></li>
           <li><small>Hinweis</small><span class="leise">In akuten Notlagen wenden Sie sich bitte an den Notruf 110 / 112 oder die TelefonSeelsorge 0800 111 0 111.</span></li>
         </ul>
       </div>
@@ -105,9 +106,9 @@
         <div>
           <h4>Kontakt</h4>
           <ul>
-            <li><span class="platzhalter">[Telefon]</span></li>
-            <li><span class="platzhalter">[E-Mail]</span></li>
-            <li><span class="platzhalter">[Ort / Einsatzgebiet]</span></li>
+            <li><span class="leise">Noch nicht hinterlegt</span></li>
+            <li><span class="leise">Noch nicht hinterlegt</span></li>
+            <li><span class="leise">Noch nicht hinterlegt</span></li>
           </ul>
         </div>
       </div>
