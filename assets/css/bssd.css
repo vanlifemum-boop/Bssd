@@ -69,6 +69,13 @@ h1 { hyphens:none; }
 .hero__bild { max-width:350px; width:100%; justify-self:center; color:var(--lime); }
 .hero .knopf:not(.knopf--rahmen) { background:var(--lime); border-color:var(--lime); color:var(--tinte); }
 .hero .knopf:not(.knopf--rahmen):hover { background:#eff5d6; }
+.hero-szene { margin:0; width:100%; max-width:460px; justify-self:center; }
+.hero-szene img { width:100%; height:auto; background:#f3f1e7; border-radius:14px 14px 0 0; }
+.hero-szene figcaption { padding:18px 22px; background:#e2e9d7; color:var(--tinte); border-radius:0 0 14px 14px; font-size:.76rem; line-height:1.65; }
+.hero-szene figcaption strong { display:block; font-size:.96rem; line-height:1.4; margin-bottom:7px; font-weight:600; }
+.angebot-illustration { width:100%; height:auto; aspect-ratio:520 / 440; object-fit:contain; margin:16px 0 18px; }
+.sek--tinte .karte__icon { color:var(--lime); }
+
 .hero--start { padding:52px 0 0; background:var(--papier); color:var(--tinte); }
 .start-raster { display:grid; grid-template-columns:1fr .94fr; align-items:center; gap:7%; }
 .start-text { padding:10px 0 22px; }
@@ -84,7 +91,7 @@ h1 { hyphens:none; }
 .signatur-linie { width:36px; height:1px; background:#879f85; }
 .hero-signatur strong { font-weight:500; color:var(--tinte); }
 .start-visual { position:relative; align-self:stretch; display:flex; align-items:center; padding-bottom:25px; }
-.start-visual img { width:100%; border-radius:12px; }
+.start-visual img { width:100%; border-radius:12px; background:#eef0e5; }
 .visual-notiz { position:absolute; right:-20px; bottom:63px; display:flex; align-items:center; gap:17px; padding:20px 29px; background:var(--lime); color:var(--tinte); border-radius:7px; box-shadow:0 8px 30px #0b292921; transform:rotate(-4deg); font-size:.81rem; line-height:1.7; }
 .notiz-icon { font-size:2.2rem; font-weight:300; }
 .visual-notiz strong { font-weight:600; }
@@ -107,17 +114,6 @@ h1 { hyphens:none; }
 .angebot--schulung { --karte-farbe:#e6e9e1; }
 .angebot-kopf { display:flex; justify-content:space-between; align-items:center; font-size:.72rem; font-weight:600; }
 .rund-pfeil { display:grid; place-items:center; width:33px; height:33px; border:1px solid #173c3e35; border-radius:50%; font-size:1.2rem; }
-.angebot-symbol { position:relative; height:135px; display:flex; align-items:center; justify-content:center; }
-.symbol-beratung span { border:2px solid #52796a; border-radius:50%; width:73px; height:73px; margin:0 -12px; }
-.symbol-beratung span:last-child { background:#52796a17; }
-.symbol-sport { gap:7px; transform:rotate(-18deg); }
-.symbol-sport span { width:19px; height:58px; background:#a6674c; border-radius:15px; }
-.symbol-sport span:nth-child(2) { height:89px; }
-.symbol-sport span:last-child { height:43px; }
-.symbol-schulung { gap:7px; }
-.symbol-schulung span { width:30px; height:66px; border:2px solid #6f8261; border-radius:40px 40px 0 0; }
-.symbol-schulung span:nth-child(2) { height:91px; background:#6f826118; }
-.symbol-schulung span:last-child { height:44px; }
 .angebot h3 { font-size:clamp(1.4rem,2.1vw,1.85rem); line-height:1.18; font-weight:600; margin-bottom:16px; }
 .angebot>p { font-size:.88rem; color:var(--text-leise); line-height:1.75; }
 .angebot-tags { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 24px; }
@@ -290,7 +286,6 @@ h1 { hyphens:none; }
   .angebot h3 { font-size:1.35rem; }
   .angebot-kopf { font-size:.65rem; }
   .angebot-tags { display:none; }
-  .angebot-symbol { height:120px; }
   .haltung-raster { gap:8%; }
   .profil-marke { padding:26px; min-height:350px; }
   .profil-initialen { font-size:8rem; }
@@ -317,7 +312,7 @@ h1 { hyphens:none; }
   .hero--start .knopf-zeile { gap:20px; margin-top:24px; }
   .hero-signatur { margin-top:26px; }
   .start-visual { padding:0; max-width:480px; width:100%; margin:0 auto 8px; }
-  .start-visual img { width:100%; aspect-ratio:1.07; object-fit:cover; object-position:center 44%; }
+  .start-visual img { width:100%; aspect-ratio:auto; object-fit:contain; }
   .visual-notiz { right:-6px; bottom:18px; padding:14px 22px; }
   .hero-fuss { margin-top:27px; font-size:.64rem; align-items:center; }
   .hero-fuss a { max-width:145px; line-height:1.5; gap:12px; text-align:right; }
@@ -329,7 +324,6 @@ h1 { hyphens:none; }
   .angebote-raster { grid-template-columns:1fr; gap:18px; }
   .angebot { padding:27px; }
   .angebot-kopf { font-size:.8rem; }
-  .angebot-symbol { height:110px; }
   .angebot h3 { font-size:1.9rem; }
   .angebot>p { max-width:42ch; font-size:.95rem; }
   .angebot-tags { display:flex; }

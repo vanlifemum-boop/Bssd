@@ -16,11 +16,14 @@ Veröffentlichung: Jeder Push auf `main` baut die Seiten und stellt sie über Gi
 | `assets/` | Gemeinsames CSS, JS, Favicon |
 
 Die Startseite verbindet eine große typografische Hero-Sektion mit einer lokalen
-SVG-Grafik der drei Säulen, Angebotskarten, einem Profilbereich, Einzel-AAT® und
+Beratungsillustration, bebilderten Angebotskarten, einem Profilbereich, Einzel-AAT® und
 einer aufklappbaren Orientierungshilfe. Die Gestaltung nutzt Petrol, Salbei,
 warme Naturtöne und Systemschriftarten ohne externe Schriftanbieter.
 Alle Unterseiten verwenden dieselbe responsive Navigation und Gestaltung.
 Über die Säulenleiste wechselt man direkt zwischen Beratung, Sport und Schulungen.
+Die lokalen SVG-Illustrationen zeigen Familienberatung, angeleitetes Pratzentraining,
+einen Workshop und ein Einzelgespräch im AAT. Bildunterschriften erläutern den Bezug
+zum Angebot; die Figuren sind Illustrationen und keine Porträts realer Personen.
 
 ## Bearbeiten
 

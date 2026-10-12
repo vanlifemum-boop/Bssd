@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" fill="none">
+  <title>Praxisnaher Workshop</title>
+  <desc>Eine schulende Person erklärt an einem Flipchart Gesprächsführung und Handlungsschritte. Zwei Teilnehmende hören zu.</desc>
+  <path d="M67 364V175a192 192 0 0 1 384 0v189Z" fill="#e1e7d7"/>
+  <path d="M104 175a155 155 0 0 1 310 0" stroke="#c5d0b8" stroke-width="2"/>
+  <ellipse cx="260" cy="393" rx="210" ry="19" fill="#cfd8c9"/>
+  <path d="m321 223-21 128m89-128 20 128m-61-123v136" stroke="#658370" stroke-width="6" stroke-linecap="round"/>
+  <rect x="266" y="79" width="176" height="168" rx="8" fill="#a5b998"/>
+  <rect x="272" y="86" width="164" height="148" rx="4" fill="#fffbed"/>
+  <path d="M277 81h153" stroke="#64836c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M293 109h83a9 9 0 0 1 9 9v18a9 9 0 0 1-9 9h-41l-13 12v-12h-29a9 9 0 0 1-9-9v-18a9 9 0 0 1 9-9Z" fill="#dce8b8"/>
+  <path d="M298 123h58m-58 10h40" stroke="#809b72" stroke-width="3" stroke-linecap="round"/>
+  <path d="m290 177 6 6 10-12m16 6h86m-118 29 6 6 10-12m16 6h62" stroke="#64836c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m172 284 22 1 6 72h-21Zm27 0h21l14 74h-22Z" fill="#2d5448"/>
+  <path d="m178 354 21 1 2 18h-34c-5 0-6-5-1-8Zm34 1h21l18 12c4 4 1 6-4 6h-35Z" fill="#173b3b"/>
+  <path d="M177 176c11-11 34-11 45 1 14 17 13 72 7 111h-67c1-41 0-89 15-112Z" fill="#c99270"/>
+  <path d="M189 171v-23h23v25Z" fill="#ac7153"/>
+  <ellipse cx="200" cy="133" rx="26" ry="31" fill="#c28b6a"/>
+  <path d="M174 131c-7-34 51-45 56-9l-22-9-15 6-19 12Z" fill="#3b4d3d"/>
+  <path d="m222 132 7 8-7 2" fill="#c28b6a"/>
+  <circle cx="217" cy="130" r="2" fill="#254842"/>
+  <path d="m217 191 34 16 39-35" stroke="#c28b6a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m217 174 21 13-8 28-27-14Z" fill="#c99270"/>
+  <path d="m174 200-12 39 26 22" stroke="#c28b6a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M169 176h23l-13 44-22-9Z" fill="#c99270"/>
+  <path d="m285 179 20-18" stroke="#36574b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M84 329h103v46H84Z" fill="#9cb395"/>
+  <path d="M99 373v23m73-23v23" stroke="#36594f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M98 327c8-24 61-26 73 0l18 49H82Z" fill="#a8bd82"/>
+  <path d="M121 306v-19h24v20Z" fill="#ca9571"/>
+  <ellipse cx="133" cy="272" rx="28" ry="33" fill="#d9a681"/>
+  <path d="M105 283c-15-56 61-66 57-11l-11 25h-40Z" fill="#6e6750"/>
+  <path d="M84 335h95v45H84Z" fill="#8ba382"/>
+  <path d="m105 335 10 22m44-22-10 22" stroke="#a3b897" stroke-width="3" stroke-linecap="round"/>
+  <path d="M334 329h102v45H334Z" fill="#99ad9c"/>
+  <path d="M348 373v23m74-23v23" stroke="#36594f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M348 325c12-24 56-23 70 0l19 53H330Z" fill="#365f51"/>
+  <path d="M371 307v-22h23v23Z" fill="#b98262"/>
+  <ellipse cx="382" cy="269" rx="28" ry="34" fill="#c59370"/>
+  <path d="M354 271c-10-49 55-57 58-17l-4 22-13-14-11 6-13-9-17 12Z" fill="#314b3e"/>
+  <path d="M332 337h104v43H332Z" fill="#89a28d"/>
+  <path d="M349 351h70" stroke="#b4c4ab" stroke-width="3" stroke-linecap="round"/>
+  <path d="M58 194h40l-5 79H63Z" fill="#c59c77"/>
+  <path d="M79 196v-66" stroke="#6d8b6b" stroke-width="4"/>
+  <path d="M79 163c-29-4-27-31-27-31s27 1 27 31Zm0 12c26-4 29-30 29-30s-29 0-29 30Z" fill="#90a678"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" fill="none">
+  <title>Gemeinsam ins Gespräch kommen</title>
+  <desc>Eine beratende Person, ein Elternteil und ein Kind sitzen zusammen an einem Tisch.</desc>
+  <path d="M79 357V176a174 174 0 0 1 348 0v181Z" fill="#e1e8d8"/>
+  <path d="M110 168a143 143 0 0 1 286 0" stroke="#c3d0b7" stroke-width="2"/>
+  <ellipse cx="263" cy="392" rx="207" ry="19" fill="#d2dbcc"/>
+  <path d="M41 210h38v158H41z" fill="#c1cfb8"/>
+  <path d="M51 368v-64M67 368v-64" stroke="#789180" stroke-width="5"/>
+  <path d="M61 298c-1-28-28-35-28-35s-4 29 28 35Zm0-24c26-6 27-35 27-35s-29 2-27 35Z" fill="#789180"/>
+  <path d="M426 302h40l-5 78h-30Z" fill="#be8469"/>
+  <path d="M446 302v-89" stroke="#547762" stroke-width="5" stroke-linecap="round"/>
+  <path d="M446 254c-31-1-33-38-33-38s33 2 33 38Zm0 20c30-5 33-38 33-38s-33 5-33 38Z" fill="#789b73"/>
+  <rect x="91" y="275" width="104" height="54" rx="14" fill="#97afa1"/>
+  <path d="M104 329v57m74-57v57" stroke="#355c54" stroke-width="7" stroke-linecap="round"/>
+  <path d="m140 300 63 23 10 55h-25l-14-39-49-4Z" fill="#244c47"/>
+  <path d="m192 374 18-2 14 14c4 4 1 7-4 7h-33Z" fill="#183d3d"/>
+  <path d="m125 302 38 34-18 44h-24l10-41-24-18Z" fill="#356458"/>
+  <path d="m121 376 22 1-1 15h-34c-5 0-7-5-1-8Z" fill="#183d3d"/>
+  <path d="M108 222c8-18 43-20 56-3 11 16 15 57 14 91-23 11-54 11-77-1l-1-45Z" fill="#c3d595"/>
+  <path d="M125 215v-25h23v27c-6 10-18 10-23-2Z" fill="#c68767"/>
+  <ellipse cx="137" cy="177" rx="28" ry="34" fill="#dca584"/>
+  <path d="M108 177c-12-46 60-52 58-8-18 1-29-7-40-18-4 12-12 17-18 18Z" fill="#254842"/>
+  <path d="m159 176 7 10-8 2" fill="#dca584"/>
+  <circle cx="156" cy="175" r="2" fill="#254842"/>
+  <path d="m159 247 29 21 41-11" stroke="#dca584" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m111 252 8 37 57 4" stroke="#dca584" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m157 225 23 27-24 15-15-21" fill="#c3d595"/>
+  <rect x="329" y="280" width="88" height="49" rx="13" fill="#bd9b84"/>
+  <path d="M338 329v57m64-57v57" stroke="#355c54" stroke-width="7" stroke-linecap="round"/>
+  <path d="m371 303-49 34-14 41h25l16-30 48-27Z" fill="#365c51"/>
+  <path d="m308 376 23 1-1 16h-36c-5 0-5-5-1-8Z" fill="#183d3d"/>
+  <path d="m383 308-19 28 14 43h22l-7-39 12-22Z" fill="#254a43"/>
+  <path d="m378 376 20-1 14 11c4 4 1 7-3 7h-31Z" fill="#183d3d"/>
+  <path d="M348 226c9-20 40-20 52-2 9 15 11 57 12 88-22 10-51 9-71-2Z" fill="#c78969"/>
+  <path d="M361 219v-26h22v24c-5 11-16 13-22 2Z" fill="#a96b4f"/>
+  <ellipse cx="371" cy="181" rx="26" ry="33" fill="#be8766"/>
+  <path d="M346 183c-17-44 38-61 55-29 6 11 5 35 10 54-17 5-25-5-28-18 0-11-2-26-8-34-5 13-14 20-29 21Z" fill="#3e4940"/>
+  <circle cx="351" cy="180" r="2" fill="#254842"/>
+  <path d="m348 182-6 9 7 2" fill="#be8766"/>
+  <path d="m352 248-28 26-41-6" stroke="#be8766" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m348 227-14 25 23 14 15-27" fill="#c78969"/>
+  <path d="M254 296v74m28-74v74" stroke="#6e8576" stroke-width="6" stroke-linecap="round"/>
+  <path d="m246 321 8 45h14l2-43m4-2 5 45h15l-1-47" fill="#46685e"/>
+  <path d="M253 363h15v13h-24c-5 0-4-6 0-8Zm26 0h15l8 8c3 4 1 6-2 6h-21Z" fill="#183d3d"/>
+  <path d="M245 264c9-15 32-16 43 0l9 60h-57Z" fill="#e1c57f"/>
+  <path d="M260 253v-14h16v16Z" fill="#c99170"/>
+  <ellipse cx="268" cy="226" rx="22" ry="26" fill="#dba480"/>
+  <path d="M246 222c-8-34 47-39 44-1l-12-9-12 5-9-8-11 13Z" fill="#4b4a3d"/>
+  <path d="m248 276-24 8m62-8 21 8" stroke="#dba480" stroke-width="12" stroke-linecap="round"/>
+  <path d="M182 299h144l-9 14H192Z" fill="#b58c6e"/>
+  <ellipse cx="254" cy="291" rx="79" ry="18" fill="#f8f6e9"/>
+  <path d="m205 294 18-8 22 8-19 7Z" fill="#bbcf9d"/>
+  <path d="m262 289 18-6 22 7-20 7Z" fill="#e6c491"/>
+  <path d="M162 64h89a15 15 0 0 1 15 15v35a15 15 0 0 1-15 15h-40l-22 19v-19h-27a15 15 0 0 1-15-15V79a15 15 0 0 1 15-15Z" fill="#fffdf3"/>
+  <path d="M171 88h70m-70 16h49" stroke="#789180" stroke-width="5" stroke-linecap="round"/>
+  <path d="M284 86h44a13 13 0 0 1 13 13v27a13 13 0 0 1-13 13h-4v15l-19-15h-21a13 13 0 0 1-13-13V99a13 13 0 0 1 13-13Z" fill="#d1dea8"/>
+  <path d="m292 112 9 9 17-19" stroke="#4e7058" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

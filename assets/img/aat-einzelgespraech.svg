@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" fill="none">
+  <title>Einzelgespräch im Anti-Gewalt-Training</title>
+  <desc>Zwei Menschen sitzen einander zugewandt. Ein Gespräch und ein gemeinsam erarbeiteter Plan stehen im Mittelpunkt.</desc>
+  <path d="M69 361V176a190 190 0 0 1 380 0v185Z" fill="#e1e8d8"/>
+  <path d="M104 181a155 155 0 0 1 310 0" stroke="#c4d0b9" stroke-width="2"/>
+  <ellipse cx="260" cy="391" rx="205" ry="20" fill="#d1dbcd"/>
+  <path d="M60 313h34l-4 65H64Z" fill="#be8469"/>
+  <path d="M77 316v-93" stroke="#577c64" stroke-width="4"/>
+  <path d="M77 266c-28-3-31-34-31-34s28-2 31 34Zm0 20c27-2 31-32 31-32s-30-2-31 32Z" fill="#83a078"/>
+  <rect x="98" y="275" width="97" height="57" rx="14" fill="#a5b8a4"/>
+  <path d="M108 332v53m74-53v53" stroke="#36594f" stroke-width="7" stroke-linecap="round"/>
+  <path d="m147 302 65 18 6 56h-24l-13-39-51-3Z" fill="#254c46"/>
+  <path d="m194 374 23-1 14 13c4 4 1 7-5 7h-32Z" fill="#183d3d"/>
+  <path d="m122 306 35 27-17 46h-22l9-40-21-18Z" fill="#3a675a"/>
+  <path d="m119 376 20 1v16h-34c-4 0-6-4-2-8Z" fill="#183d3d"/>
+  <path d="M112 217c13-15 36-15 48 0 10 13 16 60 15 93-26 8-47 8-73-1l2-58Z" fill="#bbce91"/>
+  <path d="M126 210v-22h21v23c-3 11-18 11-21-1Z" fill="#c48b6b"/>
+  <ellipse cx="137" cy="174" rx="27" ry="33" fill="#dba380"/>
+  <path d="M110 171c-9-43 57-49 57-8-20 1-28-7-40-17-2 12-8 17-17 25Z" fill="#2d4b43"/>
+  <path d="m158 173 8 10-8 2" fill="#dba380"/>
+  <circle cx="155" cy="171" r="2" fill="#254842"/>
+  <path d="m157 242 31 22 35-9" stroke="#dba380" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m159 216 22 25-23 17-16-24Z" fill="#bbce91"/>
+  <path d="m112 248 10 41 55 3" stroke="#dba380" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="rotate(-13 206 285)">
+    <rect x="182" y="259" width="47" height="61" rx="5" fill="#f6f2df" stroke="#678775" stroke-width="3"/>
+    <rect x="195" y="255" width="21" height="9" rx="3" fill="#678775"/>
+    <path d="m191 277 3 3 5-6m5 3h15m-28 13 3 3 5-6m5 3h15m-28 13 3 3 5-6m5 3h12" stroke="#678775" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="329" y="276" width="89" height="56" rx="13" fill="#b89c83"/>
+  <path d="M340 332v53m65-53v53" stroke="#36594f" stroke-width="7" stroke-linecap="round"/>
+  <path d="m372 306-45 21-13 49h24l17-35 47-16Z" fill="#355c50"/>
+  <path d="m314 375 24 1-1 17h-35c-5 0-5-5-2-8Z" fill="#183d3d"/>
+  <path d="m386 310-17 24 9 43h24l-7-34 15-21Z" fill="#244940"/>
+  <path d="m378 375 22 1 15 12c3 3 1 5-4 5h-33Z" fill="#183d3d"/>
+  <path d="M350 225c10-17 39-18 50-1 12 17 16 52 12 88-24 7-51 9-75-1l5-52Z" fill="#cb9271"/>
+  <path d="M361 218v-22h22v24Z" fill="#ac7457"/>
+  <ellipse cx="371" cy="182" rx="26" ry="31" fill="#bd8767"/>
+  <path d="M345 181c-7-16-7-32 7-36 9-12 40-5 46 8 5 11 1 22-4 30l-8-23-13 8-12-7-16 20Z" fill="#3f4a3d"/>
+  <path d="m349 180-7 10 7 2" fill="#bd8767"/>
+  <circle cx="352" cy="179" r="2" fill="#254842"/>
+  <path d="m350 249-24 30-29-8" stroke="#bd8767" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m350 227-18 23 21 18 17-29Z" fill="#cb9271"/>
+  <path d="m390 254-11 38-30 7" stroke="#bd8767" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="265" cy="321" rx="40" ry="9" fill="#f9f7e9"/>
+  <path d="M237 328v50m55-50v50" stroke="#789180" stroke-width="5" stroke-linecap="round"/>
+  <rect x="251" y="299" width="19" height="22" rx="5" fill="#93ad88"/>
+  <path d="M270 304h4a6 6 0 0 1 0 12h-4" stroke="#93ad88" stroke-width="4"/>
+  <path d="M205 68h104a17 17 0 0 1 17 17v40a17 17 0 0 1-17 17h-39l-22 19v-19h-43a17 17 0 0 1-17-17V85a17 17 0 0 1 17-17Z" fill="#fffdf2"/>
+  <circle cx="228" cy="105" r="6" fill="#6d8c75"/><circle cx="256" cy="105" r="6" fill="#8ca779"/><circle cx="284" cy="105" r="6" fill="#b2c589"/>
+  <path d="m426 134 7 7 15-17" stroke="#6f8f70" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="435" cy="133" r="26" stroke="#b2c494" stroke-width="2"/>
+</svg>
