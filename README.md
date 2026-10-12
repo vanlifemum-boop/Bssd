@@ -30,9 +30,12 @@ Die Texte stehen in `_inhalt/*.html`. Kopf, Säulenleiste und Fußbereich ergän
 python3 _bauen.py
 ```
 
-Telefon, E-Mail und Ort einmal oben in `_bauen.py` (`STAMM`) eintragen und neu bauen.
-Dann werden die Kontaktangaben auf allen Seiten übernommen und Telefon/E-Mail
-direkt verlinkt. Solange keine E-Mail-Adresse hinterlegt ist, bleibt das Formular
+Kontaktangaben werden oben in `_bauen.py` (`STAMM`) gepflegt und beim Build auf
+allen Seiten übernommen. E-Mail für sämtliche Anfragen: **info@bbsd-abi.de**.
+WhatsApp und Telegram sind für **schriftlichen Kontakt unter 0176 41504753**
+verlinkt; die internationale Nummer lautet **+4917641504753**.
+Die Nummer wird nicht als telefonische Erreichbarkeit beworben.
+Solange keine E-Mail-Adresse hinterlegt ist, bleibt das Formular
 deaktiviert und zeigt einen klaren Hinweis. Mit hinterlegter Adresse und aktivem
 JavaScript öffnet „E-Mail vorbereiten“ das lokale E-Mail-Programm; die Website
 versendet und speichert keine Nachrichten. Ohne JavaScript bleiben alle
@@ -40,7 +43,9 @@ Navigationslinks und die Orientierungshilfe zugänglich.
 
 ## Vor dem Livegang noch offen
 
-- [ ] Telefon, E-Mail, Ort (`STAMM` in `_bauen.py`)
+- [x] E-Mail, WhatsApp und Telegram (`STAMM` in `_bauen.py`)
+- [x] Biografie und fachliches Profil nach den Angaben von Gregor Nebel ergänzt
+- [ ] Ort / Einsatzgebiet ergänzen, falls gewünscht
 - [ ] Impressum: Anschrift, USt-Angabe, Markenhinweis AAT®
 - [ ] Datenschutz: Hosting-Anbieter eintragen, rechtlich prüfen lassen
 - [ ] Über mich: Abschluss Pädagogik/Soziale Arbeit, Sport-Lizenzen

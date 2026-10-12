@@ -129,6 +129,18 @@ h1 { hyphens:none; }
 .profil-initialen { font-family:var(--f-serif); font-size:10rem; line-height:1.1; letter-spacing:-.1em; color:var(--tinte); font-style:italic; }
 .profil-marke-unten { font-size:.87rem; font-weight:600; position:relative; z-index:1; }
 .profil-marke-unten>span { font-size:.67rem; font-weight:400; }
+.profil-rolle { margin:25px 0 0; color:var(--lime); font-size:1rem; line-height:1.65; font-weight:500; }
+.biografie { display:grid; grid-template-columns:.85fr 1.15fr; gap:8%; align-items:start; }
+.biografie__text { min-width:0; max-width:68ch; color:var(--text-leise); }
+.biografie__text .lead { color:var(--text); }
+.profil-liste { list-style:none; margin:0 0 30px; padding:0; }
+.profil-liste li { padding:18px 0; border-bottom:1px solid var(--linie); }
+.profil-liste li:first-child { padding-top:0; }
+.profil-liste strong,.profil-liste span { display:block; }
+.profil-liste strong { color:var(--text); margin-bottom:5px; }
+.profil-liste span { font-size:.92rem; }
+.kontakt-label { display:block; color:var(--stahl); font-size:.7rem; margin-bottom:3px; }
+.fuss a { overflow-wrap:anywhere; }
 .profil-stern { position:absolute; right:20px; bottom:15px; font-size:10rem; line-height:1; color:#a6ba8c; }
 .haltung-raster .lead { margin:26px 0 12px; }
 .haltung-raster p:not(.kicker):not(.lead) { color:var(--text-leise); font-size:.94rem; }
@@ -292,6 +304,8 @@ h1 { hyphens:none; }
   .fuss__raster { grid-template-columns:1.3fr 1fr; gap:35px; }
 }
 @media (max-width:680px) {
+  .biografie { grid-template-columns:1fr; gap:25px; }
+  .profil-rolle { font-size:.95rem; }
   html { scroll-padding-top:94px; }
   .hero--start { padding-top:37px; }
   .start-raster,.hero__raster,.sek__kopf,.haltung-raster,.aat-raster,.orientierung-raster { grid-template-columns:1fr; gap:35px; }

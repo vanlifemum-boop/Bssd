@@ -12,14 +12,21 @@ import re
 WURZEL = pathlib.Path(__file__).resolve().parent
 QUELLE = WURZEL / "_inhalt"
 
-# ---- Stammdaten: vor dem Livegang ausfüllen --------------------------------
+# ---- Kontaktangaben: zentral für alle Seiten ------------------------------
 STAMM = {
-    "email": "",      # z. B. kontakt@ihre-domain.de
-    "telefon": "",    # z. B. +49 151 …
+    "email": "info@bbsd-abi.de",
+    "messenger": "0176 41504753",  # Schriftlicher Kontakt, keine Anrufzusage
+    "messenger_international": "+4917641504753",
+    "telefon": "",    # Optional: separate Nummer für Telefonanrufe
     "ort": "",        # z. B. Einsatzgebiet / Stadt
 }
 
 def wert(schluessel, text):
+    if schluessel in {"whatsapp", "telegram"}:
+        nummer = re.sub(r"[^0-9]", "", STAMM["messenger_international"])
+        ziel = ("https://wa.me/" if schluessel == "whatsapp" else "https://t.me/+") + nummer
+        label = html.escape(STAMM["messenger"])
+        return f'<a href="{ziel}" rel="noreferrer">{label}</a>'
     v = STAMM[schluessel].strip()
     if not v:
         return '<span class="leise">Noch nicht hinterlegt</span>'
@@ -110,9 +117,9 @@ def fuss(r):
         <div>
           <h4>Kontakt</h4>
           <ul>
-            <li>{wert("telefon", "Telefon")}</li>
-            <li>{wert("email", "E-Mail")}</li>
-            <li>{wert("ort", "Ort / Einsatzgebiet")}</li>
+            <li><span class="kontakt-label">E-Mail &amp; Anfragen</span>{wert("email", "E-Mail")}</li>
+            <li><span class="kontakt-label">WhatsApp · schriftlich</span>{wert("whatsapp", "WhatsApp")}</li>
+            <li><span class="kontakt-label">Telegram · schriftlich</span>{wert("telegram", "Telegram")}</li>
           </ul>
         </div>
       </div>
@@ -132,6 +139,8 @@ def seite(meta, inhalt):
     inhalt = (inhalt.replace("{R}", r)
               .replace("{EMAIL}", wert("email", "E-Mail"))
               .replace("{TELEFON}", wert("telefon", "Telefon"))
+              .replace("{WHATSAPP}", wert("whatsapp", "WhatsApp"))
+              .replace("{TELEGRAM}", wert("telegram", "Telegram"))
               .replace("{ORT}", wert("ort", "Ort / Einsatzgebiet"))
               .replace("{EMAIL_ROH}", html.escape(STAMM["email"].strip(), quote=True))
               .replace("{SEND_DISABLED}", "disabled")

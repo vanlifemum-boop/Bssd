@@ -1,6 +1,6 @@
 pfad: kontakt/
 titel: Kontakt — BSSD | Gregor Nebel
-beschreibung: Kontakt zu BSSD – Gregor Nebel. Anfragen zu Beratung, Personal Training, Schulungen und Einzel-AAT®.
+beschreibung: Gregor Nebel erreichen: info@bbsd-abi.de sowie schriftlich per WhatsApp oder Telegram unter 0176 41504753. Beratung, Training, Schulungen und Einzel-AAT®.
 aktiv: kontakt
 saeule: beratung
 ---
@@ -8,7 +8,7 @@ saeule: beratung
       <div class="container">
         <p class="hero__nummer einblenden">Kontakt</p>
         <h1 class="einblenden">Sprechen<br />wir <em>darüber.</em></h1>
-        <p class="lead einblenden">Ob Beratung, Training oder Schulung: Hier finden Sie den richtigen Einstieg für Ihr Anliegen.</p>
+        <p class="lead einblenden">Ob Beratung, Training oder Schulung: Schreiben Sie mir per E-Mail oder kontaktieren Sie mich schriftlich über WhatsApp oder Telegram. Beschreiben Sie kurz, worum es geht – so finden wir den passenden Einstieg.</p>
       </div>
     </section>
 
@@ -36,13 +36,14 @@ saeule: beratung
           <label class="check"><input type="checkbox" name="einwilligung" required /> <span>Ich habe die <a href="{R}datenschutz/">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden. *</span></label>
           <div><button class="knopf" type="submit" {SEND_DISABLED}>E-Mail vorbereiten <span class="pfeil"></span></button></div>
           <p class="leise" style="font-size:.9rem;margin:0">{KONTAKT_HINWEIS}</p>
-        <noscript><p class="formular-status">Zum Vorbereiten der Nachricht wird JavaScript benötigt. Nutzen Sie alternativ die Kontaktdaten neben dem Formular, sobald diese verfügbar sind.</p></noscript>
+        <noscript><p class="formular-status">Zum Vorbereiten der Nachricht wird JavaScript benötigt. Schreiben Sie alternativ direkt an {EMAIL} oder nutzen Sie die Messenger-Links.</p></noscript>
         </form>
 
         <ul class="kontaktdaten">
-          <li><small>Telefon</small>{TELEFON}</li>
-          <li><small>E-Mail</small>{EMAIL}</li>
-          <li><small>Einsatzgebiet</small>{ORT}</li>
+          <li><small>E-Mail · Kontakt &amp; Anfragen</small>{EMAIL}</li>
+          <li><small>WhatsApp · schriftlich</small>{WHATSAPP}</li>
+          <li><small>Telegram · schriftlich</small>{TELEGRAM}</li>
+          <li><span class="leise">Die Messenger-Links öffnen den jeweiligen Dienst. Falls Telegram keinen Chat öffnet, können Sie mich über die angegebene Nummer suchen oder per E-Mail erreichen.</span></li>
           <li><small>Hinweis</small><span class="leise">In akuten Notlagen wenden Sie sich bitte an den Notruf 110 / 112 oder die TelefonSeelsorge 0800 111 0 111.</span></li>
         </ul>
       </div>
